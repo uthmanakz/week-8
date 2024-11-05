@@ -20,7 +20,7 @@ jobs:
        scp -o StrictHostKeyChecking=no -i privkey.pem index.html ec2-user@ec2-3-8-122-121.eu-west-2.compute.amazonaws.com:~/
        
        echo "moving index.html file to web root of nginx"
-       sudo mv ~/index.html /var/www/html/index.html
+       sudo mv ~/index.html /usr/share/nginx/html
        
        echo "conneting to ec2 via ssh & installing nginx"
        ssh -o StrictHostKeyChecking=no -i privkey.pem ec2-user@ec2-3-8-122-121.eu-west-2.compute.amazonaws.com '
