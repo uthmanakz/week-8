@@ -20,5 +20,5 @@ jobs:
        echo "conneting to ec2 via ssh"
        ssh -o StrictHostKeyChecking=no -i privkey.pem ec2-user@ec2-3-8-122-121.eu-west-2.compute.amazonaws.com '
        sudo yum install nginx -y
-       sudo service niginx start
+       sudo service nginx start
        '
