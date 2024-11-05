@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: install nginx into ec2 machine and deploy file
       env:
-       PRIAVTE-KEY : ${{ secrets.SSH_PRIVATE_KEY }}
+       PRIVATE-KEY : ${{ secrets.SSH_PRIVATE_KEY }}
 
       run: |
        echo "$PRIVATE_KEY" > privkey.pem && chmod 600 privkey.pem
@@ -20,5 +20,5 @@ jobs:
        echo "conneting to ec2 via ssh"
        ssh -o StrictHostKeyChecking=no -i privkey.pem ec2-user@ec2-3-8-122-121.eu-west-2.compute.amazonaws.com '
        sudo yum install nginx -y
-       sudo service niginx star
+       sudo service niginx start
        '
