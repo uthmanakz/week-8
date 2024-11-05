@@ -24,6 +24,5 @@ jobs:
        ssh -o StrictHostKeyChecking=no -i privkey.pem ec2-user@ec2-3-8-122-121.eu-west-2.compute.amazonaws.com '
        sudo yum install nginx -y
        sudo service nginx start
-       echo "moving index.html file to web root of nginx"
        sudo mv ~/index.html /usr/share/nginx/html
        '
