@@ -26,5 +26,5 @@ jobs:
        sudo service nginx start
        '
 
-      echo "moving index.html file to web root of nginx"
+       echo "moving index.html file to web root of nginx"
        sudo mv ~/index.html /usr/share/nginx/html
